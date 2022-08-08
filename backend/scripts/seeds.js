@@ -6,7 +6,7 @@ require("../models/Item");
 require("../models/Comment");
 const User = mongoose.model("User");
 const Item = mongoose.model("Item");
-var Comment = mongoose.model("Comment");
+const Comment = mongoose.model("Comment");
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.set("debug", true);
 
@@ -82,7 +82,7 @@ function createNewItem(user, serial) {
         image: '',
         tagList: [],
     };
-    var item = new Item(itemPayload);
+    const item = new Item(itemPayload);
     item.seller = user.id;
     return item.save().then((item, err) => {
         if (err) {
