@@ -10,4 +10,23 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 
 ## First setup
 
-**[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+* Step 1 - Clone this repository:
+    ```shell
+    git clone git@github.com:ObelusFamily/Anythink-Market-btvep.git
+    ```
+
+* Step 2 - [Install Docker](https://docs.docker.com/get-docker/)
+Verify by running 
+    ```shell
+    docker -v
+    docker-compose -v
+    ```
+* Step 3 - Start the container (from the root folder):
+    ```shell
+    docker-compose up
+    ```
+* Step 4 - Verify backend is up by receving a ping response from: [http://localhost:3000/api/ping](http://localhost:3000/api/ping)
+
+* Step 5 - Verify frontend by creating a user at: [http://localhost:3001/register](http://localhost:3001/register)
+* 
+
